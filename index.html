@@ -1,0 +1,122 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Drive</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/1/12/Google_Drive_icon_%282020%29.svg" type="image/svg+xml">
+    <style>
+        body {
+            background-color: #1e1e1e;
+            font-family: 'Segoe UI', sans-serif;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #eee;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            background-color: #222;
+        }
+
+        #custom-url-input {
+            padding: 10px;
+            margin-top: 20px;
+            width: 60%;
+            border-radius: 6px;
+            border: none;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Game Launcher</h1>
+
+    <button onclick="openSite('https://watch.sling.com')">Open Sling</button>
+    <button onclick="openSite('https://definitelynotblocked.vercel.app/games/1v1lol/index.html')">Open 1v1.lol</button>
+    <button onclick="openSite('https://d1tm91r4ytbt54.cloudfront.net/2779cbcb-a02f-48a3-9e2e-95a8d123d165/1685483461665/web/index.html')">Open Minecraft</button>
+    <button onclick="openSite('https://slither.io')">Open Slither.io</button>
+    <button onclick="openSite('https://colonysim.net/')">Open Colony Sim</button>
+    <button onclick="openSite('http://lo-th.github.io/3d.city/index.html')">Open 3D.City</button>
+    <button onclick="openSite('https://www.bekenet.com/bekenetgames/HexGLmaster/')">Open Hex.GL</button>
+    <button onclick="openSite('https://chromewebstore.google.com/')">Open Invisible Lizard Hunter</button>
+    <button onclick="openSite('https://clarkeadg.github.io/opensonic-js/')">Open Sonic</button>
+    <button onclick="openSite('https://jchabin.github.io/cars/')">Open Online Racing Game</button>
+    <button onclick="openSite('https://www.samuelrblackman.com/rts/')">Open Tower Defense Game</button>
+    <button onclick="openSite('https://helios-browser.vercel.app/')">Open Helios Browser</button>
+    <button onclick="openSite('https://jackrugile.com/radius-raid/')">Open Radius Raid</button>
+    <button onclick="openSite('https://definitelynotblocked.vercel.app/games/sm64/index.html')">Open SM64</button>
+    <button onclick="openSite('https://definitelynotblocked.vercel.app/games/bitlife/index.html')">Open Bitlife</button>
+    <button onclick="openSite('https://definitelynotblocked.vercel.app/games/cookieclicker/index.html')">Open Cookie Clicker</button>
+    <button onclick="openSite('https://definitelynotblocked.vercel.app/games/jetpackjoyride/index.html')">Open Jetpack Joyride</button>
+    <button onclick="openSite('https://definitelynotblocked.vercel.app/games/fruitninja/index.html')">Open Fruit Ninja</button>
+    <button onclick="openSite('https://definitelynotblocked.vercel.app/games/dogeminer/index.html')">Open Doge Miner</button>
+    <button onclick="openSite('https://definitelynotblocked.vercel.app/games/pokemondiamond/index.html')">Open Pokemon Diamond</button>
+    <button onclick="openSite('https://definitelynotblocked.vercel.app/games/supersmashbros/index.html')">Open Super Smash Bros</button>
+    <button onclick="openSite('https://definitelynotblocked.vercel.app/games/ducklife5/index.html')">Open Duck Life</button>
+    <button onclick="openSite('https://definitelynotblocked.vercel.app/games/thereisnogame/index.html')">Open There Is No Game</button>
+    <button onclick="openSite('https://definitelynotblocked.vercel.app/games/supermarioworld/index.html')">Open Super Mario World</button>
+    <button onclick="openSite('https://definitelynotblocked.vercel.app/games/supermariokart/index.html')">Open Super Mario Kart</button>
+    <button onclick="openSite('https://definitelynotblocked.vercel.app/games/ovo/index.html')">Open OVO</button>
+    <button onclick="openSite('https://definitelynotblocked.vercel.app/games/thesims3/index.html')">Open The Sims 3</button>
+    <button onclick="openSite('https://definitelynotblocked.vercel.app/games/legobatman/index.html')">Open Lego Batman</button>
+    <button onclick="openSite('https://blooketbot.me')">Open Blooket Hacks</button>
+
+    <div>
+        <input type="text" id="custom-url-input" placeholder="Enter domain, e.g. example.com">
+        <button onclick="openCustomURL()">Open Custom Site</button>
+    </div>
+  <button onclick="window.open('https://forms.gle/9NLM4n4ih2vZLPYk6', '_blank')">Request a Game</button>
+    <script>
+        function openSite(url) {
+            const win = window.open();
+            const iframe = win.document.createElement('iframe');
+            iframe.style.width = "100vw";
+            iframe.style.height = "100vh";
+            iframe.style.border = "none";
+            iframe.style.position = "fixed";
+            iframe.style.top = "0";
+            iframe.style.left = "0";
+            iframe.src = url;
+
+            win.document.body.style.margin = "0";
+            win.document.body.style.padding = "0";
+            win.document.documentElement.style.overflow = "hidden";
+            win.document.body.appendChild(iframe);
+        }
+
+        function openCustomURL() {
+            const input = document.getElementById('custom-url-input').value.trim();
+            if (input) {
+                const url = input.startsWith('http') ? input : 'https://' + input;
+                openSite(url);
+            } else {
+                alert('Please enter a valid URL.');
+            }
+        }
+    </script>
+</body>
+</html>
